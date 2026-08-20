@@ -31,26 +31,20 @@
     scroll-behavior: smooth;
 }
 
-
 body {
     background-color: #06171E;
-    
 }
 
 .header-container {
-
     background-color: #09212A;
     padding: 20px 140px;
-    
 }
 
 main {
-    
     display: flex;
     flex-direction: column;
     padding: 135px;
     margin-bottom: 76px;
-    
 }
 
 .main-container h1 {
@@ -60,9 +54,7 @@ main {
     font-size: 56px;
 
     text-align: center;
-    
     margin-bottom: 80px;
-    
 }
 
 .photo-wrapper {
@@ -70,7 +62,6 @@ main {
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
-    
 }
 
 .photo-wrapper img {
@@ -83,7 +74,7 @@ main {
 
 .photo-wrapper img:hover {
     outline: 2px solid turquoise;
-    
+    cursor: pointer;
 }
 
 .photo-widget img {
@@ -94,7 +85,6 @@ main {
 }
 
 .photo-widget button {
-    
     border: none;
     background: none;
     width: 40px;
@@ -111,8 +101,7 @@ main {
     border: 1px solid transparent;
     background-color: #124658;
     border-radius: 50%;
-    
-    
+    cursor: pointer;
 }
 
 .photo-widget {
@@ -121,27 +110,58 @@ main {
     border-radius: 40px;
     border: none;
     margin: auto;
-    
 }
 
 .dialog-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.dialog-header p {
+    color: white;
+    font-family: "Figtree";
+    font-size: 24px;
+    font-weight: 700;
 }
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+    margin-top: 60px;
+}
 
-.photo-widget p {
+.nav button {
+    width: 60px ;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fd5b4f2f;
+    cursor: pointer;
+}
+
+.nav button:first-child img {
+    transform: scaleX(-1);
+}
+
+.nav button:hover {
+    background-color: #fd5b4f6c; ;
+}
+
+.nav p {
     color: white;
     font-family: "Figtree";
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-container {
@@ -160,8 +180,6 @@ dialog::backdrop {
     padding-top: 31.5px;
     padding-bottom: 31.5px;
     clip-path: ellipse(85% 100% at 50% 100%);
-    
-    
 }
 
 .footer-container img {

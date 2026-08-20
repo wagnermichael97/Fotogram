@@ -31,6 +31,7 @@ let alts = [
 
 let photoBoxEL = document.getElementById("photo-box");
 let dialog = document.getElementById("dialog");
+let currentIndex = 0;
 
 photoBoxEL.innerHTML = "";
 
@@ -39,25 +40,11 @@ for (let i = 0; i < photos.length; i++) {
     photoBoxEL.innerHTML += `<img src="${photos[i]}" onclick="openDialog(${i})">`;
 }
 
-
 function openDialog(i) {
     document.getElementById("dialog-text").innerHTML = alts[i];
     document.getElementById("dialog-image").src = photos[i];
     document.getElementById("dialog-image").alt = alts[i];
-
+    document.getElementById("image-counter").innerHTML = i + 1 + "/" + photos.length;
+    
     dialog.showModal();
 }
-
-
-
-
-/*function openDialog(i) {
-    dialog.innerHTML = `
-        <button onclick="dialog.close()"><img src="./assets/icons/close.png" alt="close-button"></button>
-        <p>${alts[i]}</p>
-        <img src="${photos[i]}" alt="${alts[i]}">`;
-
-    dialog.showModal();
-}*/
-
-//MIT Dialog arbeiten
