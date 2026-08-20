@@ -93,6 +93,30 @@ main {
     object-fit: cover;
 }
 
+
+.photo-widget {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30%;
+    left: 30%;
+}
+
+.photo-widget button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.photo-widget p {
+    color: white;
+    font-family: "Figtree";
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
 .footer-container {
 
     background-color: #09212A;

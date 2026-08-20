@@ -11,19 +11,42 @@ let photos = [
     "./assets/img/img_10_big.jpg",
     "./assets/img/img_11_big.jpg",
     "./assets/img/img_12_big.jpg",
-    
+
+]
+
+let alts = [
+    "Alaska",
+    "Tokyo",
+    "Clouds",
+    "Bird",
+    "Hurricane",
+    "Winter Landscape",
+    "Duck",
+    "Night",
+    "Little Bird",
+    "Little Leopard",
+    "Mountain Skyline",
+    "Tree in Winter",
 ]
 
 let photoBoxEL = document.getElementById("photo-box");
-let widgetBoxEL = document.getElementById("widget-box");
+let dialog = document.getElementById("dialog");
 
 photoBoxEL.innerHTML = [];
 
 
 for (let i = 0; i < photos.length; i++) {
-    photoBoxEL.innerHTML += `<img src="${photos[i]}" onclick="openLarge(${i})">`;
+    photoBoxEL.innerHTML += `<img src="${photos[i]}" onclick="openDialog(${i})">`;
 }
 
-function openLarge(index) {
-    widgetBoxEL.innerHTML = `<img src="${photos[index]}">`;
+function openDialog(i) {
+    dialog.innerHTML = `
+        <button onclick="dialog.close()">X</button>
+        <p>${alts[i]}</p>
+        <img src="${photos[i]}" alt="${alts[i]}">`;
+
+    dialog.showModal();
 }
+
+
+//MIT Dialog arbeiten
