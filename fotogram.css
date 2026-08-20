@@ -97,13 +97,6 @@ main {
     object-fit: cover;
 }
 
-.photo-widget button:hover {
-    border: 1px solid transparent;
-    background-color: #124658;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
 .photo-widget {
     background-color:#09212A;
     padding: 70px 80px;
@@ -128,6 +121,19 @@ main {
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dialog-header button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-header button:hover {
+    border: 1px solid transparent;
+    background-color: #124658;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .nav {

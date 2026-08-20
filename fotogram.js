@@ -41,10 +41,27 @@ for (let i = 0; i < photos.length; i++) {
 }
 
 function openDialog(i) {
+    currentIndex = i;
     document.getElementById("dialog-text").innerHTML = alts[i];
     document.getElementById("dialog-image").src = photos[i];
     document.getElementById("dialog-image").alt = alts[i];
     document.getElementById("image-counter").innerHTML = i + 1 + "/" + photos.length;
     
     dialog.showModal();
+}
+
+function previousPhoto() {
+    currentIndex = currentIndex - 1;
+    if (currentIndex < 0) {
+        currentIndex = currentIndex + 12
+    }
+    openDialog(currentIndex);
+}
+
+function nextPhoto() {
+    currentIndex = currentIndex + 1;
+    if (currentIndex > 11) {
+        currentIndex = currentIndex - 12;
+    }
+    openDialog(currentIndex);
 }
