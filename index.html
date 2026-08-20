@@ -21,16 +21,28 @@
         </div>
 
     </header>
-    
+
 
     <main>
 
         <div class="main-container">
+
             <h1>Your personal photo album</h1>
             <div class="photo-wrapper" id="photo-box"></div>
-            
-            <dialog closedBy="any" id="dialog" class="photo-widget"></dialog>
-            
+
+            <dialog closedBy="any" id="dialog" class="photo-widget">
+
+                <div class="dialog-header">
+                    <p id="dialog-text"></p>
+
+                    <button onclick="dialog.close()">
+                        <img src="./assets/icons/close.png" alt="Dialog schließen">
+                    </button>
+                </div>
+
+                <img id="dialog-image" src="" alt="">
+
+            </dialog>
     </main>
 
 
