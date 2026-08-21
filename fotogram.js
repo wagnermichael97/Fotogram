@@ -32,12 +32,15 @@ let photoBoxEL = document.getElementById("photo-box");
 let dialog = document.getElementById("dialog");
 let currentIndex = 0;
 
-photoBoxEL.innerHTML = "";
+function renderPhotos() {
+    photoBoxEL.innerHTML = "";
 
-
-for (let i = 0; i < photos.length; i++) {
-    photoBoxEL.innerHTML += `<img src="${photos[i]}" onclick="openDialog(${i})">`;
+    for (let i = 0; i < photos.length; i++) {
+        photoBoxEL.innerHTML += `<img src="${photos[i]}" alt="${alts[i]}" onclick="openDialog(${i})">`;
+    }
 }
+renderPhotos()
+
 
 function openDialog(i) {
     currentIndex = i;

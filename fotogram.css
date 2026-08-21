@@ -39,16 +39,19 @@
 body {
     background-color: #06171E;
     min-height: 100vh;
-   
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 173px 135px;
     max-width: 1440px;
     margin: 0 auto;
     background-color: #06171E;
+    flex: 1;
 }
 
 .main-container h1 {
@@ -241,6 +244,5 @@ header {
 
     main {
         margin: 0 auto;
-        padding-bottom: 296px;
     }
 }
