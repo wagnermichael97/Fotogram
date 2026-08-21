@@ -11,7 +11,6 @@ let photos = [
     "./assets/img/img_10_big.jpg",
     "./assets/img/img_11_big.jpg",
     "./assets/img/img_12_big.jpg",
-
 ]
 
 let alts = [
